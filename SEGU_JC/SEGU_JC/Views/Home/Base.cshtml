@@ -1,0 +1,333 @@
+﻿
+<!DOCTYPE html>
+<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/App/Login/efBaseController.js"></script>
+
+<script src="~/Scripts/angular-animate.min.js"></script>
+<script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+@*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+<link href="~/Content/Style/CSLogin.css" rel="stylesheet" />
+<link href="~/css/AdminLTE.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.js"></script>
+<link href="~/css/font-awesome.min.css" rel="stylesheet" />
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<style>
+    ul {
+        list-style: none;
+        margin: 0px 0px 0px 9px;
+        padding: 0px 0px 0px 9px;
+    }
+</style>
+
+<input type="hidden" id="hiCO_USUA" value="@ViewBag.CO_USUA" />
+<html ng-app="angularFormsApp_01">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Pantalla Base</title>
+</head>
+
+<body ng-controller="efBaseController" class="modal-body form-horizontal" style="background-color: #EEEEEE">
+
+    @*<aside class="col-sm-12">
+        <header class="navbar-inverse">
+            <div class="container text-center">
+                <img src="~/Imagenes/Banner/banner.png" />
+            </div>
+        </header>*@
+
+    <div class="wrapper">
+        <header class="header container-fluid">
+            <aside class="col-sm-3">
+                <a href="#" class="logo">
+                    <!-- Add the class icon to your logo image or logo icon to add the margining
+                    <img src="../../Imagenes/Banner/logo-cofopri.png" alt="COFOPRI" title="COFOPRI" />-->
+                </a>
+            </aside>
+
+            <aside class="col-sm-9">
+                <!-- Header Navbar: style can be found in header.less -->
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                    <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <div class="navbar-right">
+                        <ul class="nav navbar-nav">
+                            <!-- Messages: style can be found in dropdown.less-->
+                            <!-- Notifications: style can be found in dropdown.less -->
+                            <!-- Tasks: style can be found in dropdown.less -->
+                            <!-- User Account: style can be found in dropdown.less -->
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                    <span>@ViewBag.NO_USUA <i class="caret"></i></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <!-- User image -->
+                                    <li class="user-header bg-light-blue">
+                                        <img src="../../Imagenes/Banner/user.png" class="img-circle" alt="User Image" />
+                                        <p>
+                                            @ViewBag.NO_USUA - Web Developer
+                                            <small>Member since Nov. 2016</small>
+                                        </p>
+                                    </li>
+                                    <!-- Menu Body -->
+                                    <li class="user-body">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Followers</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Sales</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="#">Friends</a>
+                                        </div>
+                                    </li>
+                                    <!-- Menu Footer-->
+                                    <li class="user-footer">
+                                        <div class="pull-left">
+                                            <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                        </div>
+                                        <div class="pull-right">
+                                            <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+
+        </header>
+    </div>
+
+    @*<br />
+        <br />
+
+        <div class="modal-body">
+        </div>*@
+
+    <div class="wrapper">
+        <div class="box">
+            <div class="row">
+
+                @*<div class="column col-sm-3" id="sidebar">*@
+                @*<div class="column col-sm-4" id="sidebar" style="background-color: #2e353d;">*@
+                <div class="column col-sm-4 bg-gray" id="sidebar" >
+                    <div class="user-panel">
+                        <div class="pull-left image col-sm-3">
+                            <img src="../../Imagenes/Banner/avatar5.png" class="img-circle" alt="User Image" />
+                        </div>
+                        <div class="pull-left info col-sm-9">
+                            <p style="text-transform: uppercase; font-size: 11px;">Bienvenido <br /> @ViewBag.NO_USUA</p>
+                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+
+                    </div>
+
+                    <div class="row bg-gray" >
+                        <uib-accordion close-others="oneAtATime">
+                            @*<uib-accordion-group heading="Static Header, initially expanded" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                        This content is straight in the template.
+                    </uib-accordion-group>
+                    <uib-accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+                        {{group.content}}
+                    </uib-accordion-group>
+                    <uib-accordion-group heading="Dynamic Body Content">
+                        <p>The body of the uib-accordion group grows to fit the contents</p>
+                        <button type="button" class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
+                        <div ng-repeat="item in items">{{item}}</div>
+                    </uib-accordion-group>
+                    <uib-accordion-group heading="Custom template" template-url="group-template.html">
+                        Hello
+                    </uib-accordion-group>
+                    <uib-accordion-group heading="Delete account" panel-class="panel-danger">
+                        <p>Please, to delete your account, click the button below</p>
+                        <button class="btn btn-danger">Delete</button>
+                    </uib-accordion-group>
+                    <uib-accordion-group is-open="status.open">
+                        <uib-accordion-heading>
+                            I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        This is just some content to illustrate fancy headings.
+                    </uib-accordion-group>*@
+                            <div ng-init="items" >
+                                <ul>
+                                    <li ng-repeat="item in items">
+                                        <uib-accordion-group is-open="status.open" panel-class="panel-JC">
+                                            <uib-accordion-heading ng-model="item.ID_SIST">
+                                                <i class="fa fa-gear"> </i>
+                                                {{item.DE_SIST}}
+
+                                                <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                                            </uib-accordion-heading>
+                                            <div ng-init="items_tree">
+
+                                                <ul>
+                                                    <li ng-repeat="item_01 in items_tree | ID_SIST:item.ID_SIST">
+                                                        @*<uib-accordion-group is-open="status.isFirstOpen">*@
+                                                        <uib-accordion-group is-open="item_01.open" panel-class="panel-JC">
+                                                            <uib-accordion-heading ng-model="item_01.ID_OPCI" panel-class="panel-JC">
+                                                                <span ng-if="item_01.NO_OPCI === 'MANTENIMIENTO'">
+                                                                    <i class="fa fa-gear"> </i>
+                                                                </span>
+                                                                <span ng-if="item_01.NO_OPCI === 'SEGURIDAD'">
+                                                                    <i class="fa fa-lock"> </i>
+                                                                </span>
+                                                                <span ng-if="item_01.NO_OPCI === 'BANDEJAS'">
+                                                                    <i class="fa fa-briefcase"> </i>
+                                                                </span>
+                                                                <span ng-if="item_01.NO_OPCI === 'HERRAMIENTAS'">
+                                                                    <i class="fa fa-cogs"> </i>
+                                                                </span>
+                                                                <span ng-if="item_01.NO_OPCI === 'REPORTES'">
+                                                                    <i class="fa fa-pie-chart"> </i>
+                                                                </span>
+
+                                                                <span ng-click="Login_modu(item_01.ID_OPCI)">
+                                                                    {{item_01.NO_OPCI}}
+                                                                </span>
+                                                                @*<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.isFirstOpen, 'glyphicon-chevron-right': !status.isFirstOpen}"></i>*@
+                                                                <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': item_01.open, 'glyphicon-chevron-right': !item_01.open}"></i>
+                                                            </uib-accordion-heading>
+
+                                                            <div ng-init="items_tree_01">
+                                                                <ul>
+                                                                    <li ng-repeat="item_tree in items_tree_01 | DI_OPCI:item_01.ID_OPCI">
+                                                                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;
+                                                                        <u class="hiper_base" ng-click="Login_opci(item_tree.ID_OPCI, item_tree.DI_OPCI_RAZOR)">{{item_tree.NO_OPCI}}</u>  <br />
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </uib-accordion-group>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </uib-accordion-group>
+                                    </li>
+                                </ul>
+                            </div>
+                            @*<uib-accordion-group is-open="status.open">
+                        <uib-accordion-heading>
+                            <i class="fa fa-gear"> </i>
+                            MANTENIMIENTO <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+
+                        </uib-accordion-heading>
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;OFERTAS COMERCIALES <br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;REGLAS <br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;PAIS DE RIESGO <br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;PAIS <br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;OPERADORES <br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;LISTA REFERIDA <br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;LISTA GRIS <br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;PLANES ESPECIALES <br />
+                    </uib-accordion-group>
+
+                    <uib-accordion-group is-open="status.open">
+                        <uib-accordion-heading>
+                            <i class="fa fa-lock"> </i>
+                            SEGURIDAD <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;PERFIL ROL <br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;USUARIOS <br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;ROLES <br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;PARAMETRIZACION <br />
+                    </uib-accordion-group>
+
+                    <uib-accordion-group is-open="status.open">
+                        <uib-accordion-heading>
+                            <i class="fa fa-gear"> </i>
+                            MANTENIMIENTO <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;MATRIZ DISPERSION <br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;NRO. DESTINO RIESGO <br />
+                    </uib-accordion-group>
+
+                    <uib-accordion-group is-open="status.open">
+                        <uib-accordion-heading>
+                            <i class="fa fa-briefcase"> </i>
+                            BANDEJAS <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;IMSI COMERCIAL <br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;SYNIVERSE <br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;NRTRDE <br />
+                    </uib-accordion-group>
+
+                    <uib-accordion-group is-open="status.open">
+                        <uib-accordion-heading>
+                            <i class="fa fa-cogs"></i>
+                            HERRAMIENTAS <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;<u class="hiper_login" ng-click="Login_pass()">TRAFICO IMSI</u><br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;<u class="hiper_login" ng-click="Login_pass()">BUSCAR IMSI</u> <br />
+                    </uib-accordion-group>
+
+                    <uib-accordion-group is-open="status.open">
+                        <uib-accordion-heading>
+                            <i class="fa fa-pie-chart"></i>
+                            REPORTES <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                        </uib-accordion-heading>
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;<u class="hiper_login" ng-click="Login_pass()">RESUMEN CONSUMO</u><br />
+                        <i class="fa fa-tasks"> </i>&nbsp;&nbsp;&nbsp;<u class="hiper_login" ng-click="Login_pass()">ALERTAS ATENDIDAS</u> <br />
+                    </uib-accordion-group>*@
+                        </uib-accordion>
+                    </div>
+
+                </div>
+
+                <aside class="column col-sm-8 bg-gray" id="main">
+
+                    <div class="padding">
+
+                        <div class="full col-sm-8">
+                            @*<aside id="rpt_seg_tit_asi_right" class="right-side">*@
+                            <aside style="background-color: #BECAFF; height: 100%;" id="hiRE_PAGE">
+                                @*@RenderPage("~/Views/Usuario/Usuario.cshtml")*@
+                                <iframe src="http://matricula.upc.edu.pe/" id="hiRE_PAGE_00" width="810" height="650">
+                                    @*<iframe src="http://matricula.upc.edu.pe/" id="hiRE_PAGE_00" >*@
+                                    @RenderPage("~/Views/Usuario/Usuario.cshtml")
+                                </iframe>
+                                @*@RenderPage("")*@
+                                @*@Html.RenderPartial("~/Views/Usuario/Usuario.cshtml")*@
+                                @*<iframe src="http://matricula.upc.edu.pe/"></iframe>*@
+                                @*<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>*@
+                            </aside>
+
+                            @*<section class="content">
+                        <iframe src="http://matricula.upc.edu.pe/"></iframe>
+                    </section>*@
+
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+
+    <aside class="col-sm-12">
+        <footer class="navbar-inverse active">
+
+            <div class="container text-center">
+                <p style="color:#fff">© Copyright 2016 Imagine Dev Consulting - Todos los derechos reservados.</p>
+            </div>
+
+        </footer>
+    </aside>
+    <script src="~/App/Usuario/efUsuarioController.js"></script>
+</body>
+
+</html>

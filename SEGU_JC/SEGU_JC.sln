@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEGU_JC", "SEGU_JC\SEGU_JC.csproj", "{D7D6B38D-AF91-45EE-BACD-69A960542D36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEGU_ENTI", "SEGU_ENTI\SEGU_ENTI.csproj", "{50044A10-BB00-4FFB-84A7-5C6768B798A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEGU_ACCESO", "SEGU_ACCESO\SEGU_ACCESO.csproj", "{4EAC4152-602B-4346-8206-3E762BA7A235}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAPA_DATOS", "CAPA_DATOS\CAPA_DATOS.csproj", "{5C0CB067-06EA-430F-B065-37440F8F83D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAPA_NEGO", "CAPA_NEGO\CAPA_NEGO.csproj", "{39EA3111-0F75-48E4-A69C-F9F683E89486}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://juansocla.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CAPA_DATOS\\CAPA_DATOS.csproj
+		SccProjectName1 = CAPA_DATOS
+		SccLocalPath1 = CAPA_DATOS
+		SccProjectUniqueName2 = CAPA_NEGO\\CAPA_NEGO.csproj
+		SccProjectName2 = CAPA_NEGO
+		SccLocalPath2 = CAPA_NEGO
+		SccProjectUniqueName3 = SEGU_ACCESO\\SEGU_ACCESO.csproj
+		SccProjectName3 = SEGU_ACCESO
+		SccLocalPath3 = SEGU_ACCESO
+		SccProjectUniqueName4 = SEGU_ENTI\\SEGU_ENTI.csproj
+		SccProjectName4 = SEGU_ENTI
+		SccLocalPath4 = SEGU_ENTI
+		SccProjectUniqueName5 = SEGU_JC\\SEGU_JC.csproj
+		SccProjectName5 = SEGU_JC
+		SccLocalPath5 = SEGU_JC
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7D6B38D-AF91-45EE-BACD-69A960542D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7D6B38D-AF91-45EE-BACD-69A960542D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7D6B38D-AF91-45EE-BACD-69A960542D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7D6B38D-AF91-45EE-BACD-69A960542D36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50044A10-BB00-4FFB-84A7-5C6768B798A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50044A10-BB00-4FFB-84A7-5C6768B798A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50044A10-BB00-4FFB-84A7-5C6768B798A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50044A10-BB00-4FFB-84A7-5C6768B798A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EAC4152-602B-4346-8206-3E762BA7A235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EAC4152-602B-4346-8206-3E762BA7A235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EAC4152-602B-4346-8206-3E762BA7A235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EAC4152-602B-4346-8206-3E762BA7A235}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C0CB067-06EA-430F-B065-37440F8F83D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C0CB067-06EA-430F-B065-37440F8F83D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C0CB067-06EA-430F-B065-37440F8F83D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C0CB067-06EA-430F-B065-37440F8F83D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39EA3111-0F75-48E4-A69C-F9F683E89486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39EA3111-0F75-48E4-A69C-F9F683E89486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39EA3111-0F75-48E4-A69C-F9F683E89486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39EA3111-0F75-48E4-A69C-F9F683E89486}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

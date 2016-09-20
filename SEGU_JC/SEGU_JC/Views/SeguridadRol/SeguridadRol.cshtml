@@ -1,0 +1,113 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<link href="~/Content/ng-grid.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/font-awesome.css" rel="stylesheet" />
+
+<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular-animate.min.js"></script>
+<script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+<script src="~/Scripts/ng-grid.js"></script>
+
+<html ng-app="angularFormsApp_03">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Listar Rol</title>
+</head>
+<body ng-controller="efSeguridadRolController" style="background-color: #EEEEEE">
+    <input type="hidden" name="hiID_ROLE" id="hiID_ROLE" />
+    <input type="hidden" name="hiCO_ROLE" id="hiCO_ROLE" />
+    <input type="hidden" name="hiNO_ROLE" id="hiNO_ROLE" />
+    <div class="container-fluid">
+        <div>
+            <h3>Listado de Roles</h3>
+        </div>
+
+        <div>
+            <div class="col-xs-3 col-md-3">
+                <label for="txtCO_ROLE">Código Rol</label>
+            </div>
+
+            <div class="col-xs-9 col-md-9">
+                <input type="text" id="txtCO_ROLE" name="txtCO_ROLE" class="form-control" placeholder="Código Rol" />
+            </div>
+
+            <div>
+                <i class="fa fa-file-excel-o fa-2x Exportar" id="Mostrar"></i>
+                <span>Exportar</span>
+            </div>
+
+            <div id="exportable">
+                <div style="height:420px;" class="gridStyle" ng-grid="gridOptions">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    @*Visualizar cuando le dan click a la lupa *@
+        <div ng-controller="ModalSeguridadRolCtrl">
+            <script type="text/ng-template" id="myModalSeguridadRol.html">
+                <div class="modal-header">
+                    <h3 class="modal-title">Roles</h3>
+                </div>
+
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                        <div>
+                            <button type="button" class="btn btn-primary col-sm-3 fa fa-file-o">&nbsp; Nuevo</button>&nbsp;
+                            <span class="col-sm-1"></span>
+                            <button type="button" class="btn btn-primary col-sm-3 fa fa-pencil">&nbsp; Modificar</button>&nbsp;
+                            <span class="col-sm-1"></span>
+                            <button type="button" class="btn btn-danger col-sm-3 fa fa-trash">&nbsp; Eliminar</button>&nbsp;
+                            <span class="col-sm-1"></span>
+                        </div>
+
+                        <div>
+                            <br/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cod_rol" class="col-sm-3">Código Rol</label>
+                            <div class="col-sm-9">
+                                <input ng-model="CO_ROLE" id="cod_rol" name="cod_rol" type="text" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nom_rol" class="col-sm-3">Nombre de Rol</label>
+                            <div class="col-sm-9">
+                                <input ng-model="NO_ROLE" id="nom_rol" name="nom_rol" type="text" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="de_rol" class="col-sm-3">Descripción del Rol</label>
+                            <div class="col-sm-9">
+                                <input ng-model="DE_ROLE" id="de_rol" name="de_rol" type="text" class="form-control" />
+                            </div>
+                        </div>
+
+
+                        <div id="exportable">
+                            <div style="height:350px;" class="gridStyle" ng-grid="gridOptions_Rol">
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </script>
+        </div>
+   
+
+    <script src="~/App/SeguridadRol/efSeguridadRolController.js"></script>
+
+</body>
+</html>

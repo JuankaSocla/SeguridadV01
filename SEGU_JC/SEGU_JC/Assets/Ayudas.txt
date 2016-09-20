@@ -1,0 +1,8 @@
+﻿Estilos Modificados:
+
+Content :
+	bootstrap-theme (.panel-JC )
+	bootstrap (Añadir clase .panel-JC)
+
+Css:
+	AdminLTE (.header, #sidebar .active a, a:focus {)

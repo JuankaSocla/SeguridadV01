@@ -1,0 +1,20 @@
+﻿.hiper_login 
+{    
+   color: #4F60C3;
+}
+.hiper_login:active,
+.hiper_login:hover {
+    cursor: pointer;
+    cursor: hand
+}
+
+.hiper_base 
+{    
+   color: #98A8B9;
+}
+.hiper_base:active,
+.hiper_base:hover {
+    cursor: pointer;
+    cursor: hand
+}
+

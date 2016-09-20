@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/Style/CSLogin.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+<script src="~/App/Login/efLoginController.js"></script>
+<link href="~/css/font-awesome.min.css" rel="stylesheet" />
+
+<style>
+    .Login {
+        /*border: 1px solid #d9d9d9;
+        border: 1px dotted blue;
+        border-top: 5px solid #283A82;
+        box-shadow: 0pt 0pt 19pt #000000;
+        border-radius: 9px;
+        border-bottom: 4px solid #283A82;*/
+        box-shadow: 0pt 0pt 19pt #275F8E;
+        border-radius: 9px;
+    }
+</style>
+
+<html ng-app="angularFormsApp">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body ng-controller="efLoginController" class="modal-body form-horizontal" style="background-color: #EEEEEE">
+    <div class="container">
+
+        <form class="form-horizontal" role="form">
+
+            <br />
+            <br />
+
+            <section class="container">
+                <aside class="col-sm-3"></aside>
+                <aside class="col-sm-6" >
+                    <div>
+                        <figure class="col-sm-2">
+                            <img src="../../Imagenes/Banner/Logo_UPC.GIF" />
+                        </figure>
+                        <i class="col-sm-10"></i>
+                    </div>
+                </aside>
+                <aside class="col-sm-3"></aside>
+            </section>
+
+
+            <section class="container">
+
+                <aside class="col-sm-3"></aside>
+
+                <aside class="col-sm-6 Login">
+
+                    <br />
+
+                    <div>
+                        <p class="form-control">
+                            Usuario y Contraseña <br />
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nombre" class="col-sm-3">Usuario</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                @*<span class="input-group-addon glyphicon glyphicon-user" id="nombre_img"></span>*@
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input id="nombre" type="text" name="nombre" class="form-control" ng-required="true" value="JCASTROSO" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pass" class="col-sm-3">Password</label>
+                        <div class="col-sm-9">
+                            <div class="input-group margin-bottom-sm">
+                                @*<span class="input-group-addon glyphicon glyphicon-lock" id="basic-addon2"></span>*@
+                                @*<span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>*@
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input id="pass" name="pass" type="password" class="form-control" ng-required="true" value="TGESTIONA2015" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <div class="form-group">
+                            <p class="glyphicon glyphicon-home"></p>
+
+                            <u class="hiper_login" ng-click="Login_pass()">Olvid&oacute; su Password?</u>
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <div class="form-group">
+                            <input type="button" class="btn btn-primary" value="Ingresar" ng-click="ingresar()" />
+                            <input type="button" class="btn btn-default" value="Cancelar" />
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pass" class="col-sm-12">Recuerda que depende de ti proteger la informaci&oacute;n cuida tu contraseña</label>
+                    </div>
+
+                </aside>
+
+                <aside class="col-sm-3"></aside>
+            </section>
+
+            @*Mostrar el Cambio de Password*@
+            <div ng-controller="ModalDemoCtrl">
+                <script type="text/ng-template" id="myModalContent.html">
+
+                    <div class="modal-header">
+                        <h3 class="modal-title">Cambiar Contraseña</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="nombre_modal" class="col-sm-3">Usuario</label>
+                                <div class="col-sm-9">
+                                    <input id="nombre_modal" type="text" name="nombre_modal" class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pass_modal_ante" class="col-sm-3">Password Anterior</label>
+                                <div class="col-sm-9">
+                                    <input id="pass_modal_ante" name="pass_modal_ante" type="password" class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pass_modal" class="col-sm-3">Password</label>
+                                <div class="col-sm-9">
+                                    <input id="pass_modal" name="pass_modal" type="password" class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pass_modal_conf" class="col-sm-3">Confirmar Password</label>
+                                <div class="col-sm-9">
+                                    <input id="pass_modal_conf" name="pass_modal_conf" type="password" class="form-control" />
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="button" ng-click="ok()">Aceptar</button>
+                        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancelar</button>
+                    </div>
+
+                </script>
+
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
+
+

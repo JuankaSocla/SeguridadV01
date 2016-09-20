@@ -1,0 +1,145 @@
+﻿@*<link href="~/Content/ng-grid.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/font-awesome.css" rel="stylesheet" />
+
+<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/ng-grid.js"></script>*@
+
+<!DOCTYPE html>
+
+@*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/Style/CSLogin.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+<script src="~/App/Usuario/efUsuarioController.js"></script>
+<link href="~/css/font-awesome.min.css" rel="stylesheet" />*@
+
+<link href="~/Content/ng-grid.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/font-awesome.css" rel="stylesheet" />
+
+<script src="~/Scripts/jquery-1.9.1.min.js"></script>
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/Scripts/angular-animate.min.js"></script>
+<script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+<script src="~/Scripts/ng-grid.js"></script>
+
+<html ng-app="angularFormsApp_02">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Usuario</title>
+</head>
+<body ng-controller="efUsuarioController" style="background-color: #EEEEEE">
+    <div class="container-fluid">
+        <div>
+            <h3>Listado de Usuario</h3>
+        </div>
+
+        <div>
+            <div class="col-xs-3 col-md-3">
+                <label for="txtCOD_USUA">Código de Usuario</label>
+            </div>
+
+            <div class="col-xs-9 col-md-9">
+                <div class="form-group has-feedback has-success">
+                    <input name="txtCOD_USUA" type="text" maxlength="9" id="txtCOD_USUA" tabindex="5" class="form-control" placeholder="Código de Usuario" data-fv-field="txtCOD_USUA" value="" />
+                </div>
+            </div>
+
+
+            <div>
+                <i class="fa fa-file-excel-o fa-2x Exportar" id="Mostrar"></i>
+                <span>Exportar</span>
+
+            </div>
+
+            <div id="exportable">
+                <div style="height: 420px;" class="gridStyle" ng-grid="gridOptions">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    @*Visualizar cuando le dan click a la lupa*@
+    <div ng-controller="ModalUsuarioCtrl">
+        <script type="text/ng-template" id="myModalUsuario.html">
+
+            <div class="modal-header">
+                <h3 class="modal-title">Datos Personales</h3>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="Ap_Paterno" class="col-sm-3">Ap. Paterno</label>
+                        <div class="col-sm-9">
+                            <input id="Ap_Paterno" type="text" name="Ap_Paterno" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Ap_Materno" class="col-sm-3">Ap. Materno</label>
+                        <div class="col-sm-9">
+                            <input id="Ap_Materno" type="text" name="Ap_Materno" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Nombre" class="col-sm-3">Nombre</label>
+                        <div class="col-sm-9">
+                            <input id="Nombre" type="text" name="Nombre" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="modal-title">Rol</h4>
+                        <hr />
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label for="rol" class="col-sm-3">Rol</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" style="width:40%" id="rol">
+                                <option></option>
+                                <option>BACHILLER</option>
+                                <option>POSTGRADO</option>
+                                <option>TITULO</option>
+                            </select>
+                            @*<input id="rol" type="text" name="rol" class="form-control" />*@
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="usuario" class="col-sm-3">Usuario</label>
+                        <div class="col-sm-9">
+                            <input id="usuario" type="text" name="usuario" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="col-sm-3">Password</label>
+                        <div class="col-sm-9">
+                            <input id="password" name="password" type="password" class="form-control" />
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" ng-click="ok()">Aceptar</button>
+                <button class="btn btn-warning" type="button" ng-click="cancel()">Cancelar</button>
+            </div>
+
+        </script>
+
+    </div>
+
+    <script src="~/App/Usuario/efUsuarioController.js"></script>
+
+</body>
+</html>
